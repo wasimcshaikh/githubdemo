@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroIndia - Empowering Indian Farmers</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+           <div class="logo">
+              <img src="logo_1.png" alt="AgroIndia Logo" class="logo-img">
+            </div>
+           <div class="subNav">
+             <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#crops" class="nav-link">Crops</a></li>
+                <li><a href="#weather" class="nav-link">Weather</a></li>
+                <li><a href="#schemes" class="nav-link">Schemes</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+           </div>
+           <div>
+                <button id="theme-toggle" class="theme-toggle-btn">🌙 Dark Mode</button>
+           </div>
+           <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+           </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Empowering Indian Agriculture</h1>
+            <p>Modern solutions for traditional farming. Join us in revolutionizing agriculture across India with technology, knowledge, and sustainable practices.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToSection('services')">Explore Services</button>
+                <button class="btn btn-secondary" onclick="openWeatherModal()">Check Weather</button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="farmer-illustration">
+                <i class="fas fa-tractor"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card scroll-animate" onclick="showServiceDetails(0)">
+                    <div class="service-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>Crop Consultation</h3>
+                    <p>Expert advice on crop selection, planting techniques, and harvest optimization for maximum yield.</p>
+                </div>
+                <div class="service-card scroll-animate" onclick="showServiceDetails(1)">
+                    <div class="service-icon">
+                        <i class="fas fa-cloud-rain"></i>
+                    </div>
+                    <h3>Weather Forecast</h3>
+                    <p>Real-time weather updates and forecasts to help you plan your farming activities effectively.</p>
+                </div>
+                <div class="service-card scroll-animate" onclick="showServiceDetails(2)">
+                    <div class="service-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3>Market Prices</h3>
+                    <p>Current market prices for various crops and commodities to help you make informed selling decisions.</p>
+                </div>
+                <div class="service-card scroll-animate" onclick="showServiceDetails(3)">
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Training Programs</h3>
+                    <p>Comprehensive training programs on modern farming techniques and sustainable agriculture practices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Crops Section -->
+    <section id="crops" class="crops">
+        <div class="container">
+            <h2 class="section-title">Popular Crops in India</h2>
+            <div class="crop-selector">
+                <button class="crop-btn active" onclick="showCropInfo('rice')">Rice</button>
+                <button class="crop-btn" onclick="showCropInfo('wheat')">Wheat</button>
+                <button class="crop-btn" onclick="showCropInfo('cotton')">Cotton</button>
+                <button class="crop-btn" onclick="showCropInfo('sugarcane')">Sugarcane</button>
+            </div>
+            <div class="crop-info" id="crop-info">
+                <!-- Crop information will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Weather Widget -->
+    <section id="weather" class="weather-section">
+        <div class="container">
+            <h2 class="section-title">Weather Information</h2>
+            <div class="weather-widget">
+                <div class="weather-input">
+                    <input type="text" id="city-input" placeholder="Enter city name (e.g., Delhi, Mumbai)">
+                    <button onclick="getWeatherInfo()" class="btn btn-primary">Get Weather</button>
+                </div>
+                <div class="weather-display" id="weather-display">
+                    <div class="weather-placeholder">
+                        <i class="fas fa-cloud-sun"></i>
+                        <p>Enter a city name to get weather information</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Government Schemes -->
+    <section id="schemes" class="schemes">
+  <div class="container">
+    <h2 class="section-title">Government Schemes</h2>
+    <div class="schemes-grid">
+
+      <!-- PM-KISAN -->
+      <a href="pmkisan.html" class="scheme-card scroll-animate">
+        <h3>PM-KISAN</h3>
+        <p>Direct income support of ₹6000 per year to eligible farmer families.</p>
+        <div class="scheme-details">
+          <span class="benefit">Benefit: ₹6000/year</span>
+          <button class="btn btn-small">Learn More</button>
+        </div>
+      </a>
+
+      <!-- Crop Insurance -->
+      <a href="insurance.html" class="scheme-card scroll-animate">
+        <h3>Crop Insurance</h3>
+        <p>Comprehensive insurance coverage for crops against natural calamities.</p>
+        <div class="scheme-details">
+          <span class="benefit">Coverage: Up to 100%</span>
+          <button class="btn btn-small">Learn More</button>
+        </div>
+      </a>
+
+      <!-- Soil Health Card -->
+      <a href="soil.html" class="scheme-card scroll-animate">
+        <h3>Soil Health Card</h3>
+        <p>Free soil testing and nutrient management recommendations for farmers.</p>
+        <div class="scheme-details">
+          <span class="benefit">Service: Free</span>
+          <button class="btn btn-small">Learn More</button>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>1800-123-4567 (Toll Free)</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>support@agroindia.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>New Delhi, India</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" placeholder="Your Phone Number">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-leaf"></i>
+                        <span>AgroIndia</span>
+                    </div>
+                    <p>Empowering Indian farmers with modern technology and sustainable practices.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#crops">Crops</a></li>
+                        <li><a href="#schemes">Schemes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AgroIndia. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-body">
+                <!-- Modal content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

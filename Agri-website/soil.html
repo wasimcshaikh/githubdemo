@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soil Information Hub</title>
+    <link rel="stylesheet" href="soil.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="header-content">
+                <i class="fas fa-seedling header-icon"></i>
+                <h1 class="header-title">Soil Information Hub</h1>
+                <p class="header-subtitle">Discover the foundation of agriculture</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="soil-cards-container">
+                <!-- Clay Soil Card -->
+                <div class="soil-card" data-soil="clay">
+                    <div class="card-header">
+                        <div class="soil-sample clay-sample"></div>
+                        <h2 class="soil-name">Clay Soil</h2>
+                        <div class="soil-icon">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="property-grid">
+                            <div class="property-item">
+                                <span class="property-label">Drainage:</span>
+                                <span class="property-value poor">Poor</span>
+                            </div>
+                            <div class="property-item">
+                                <span class="property-label">Fertility:</span>
+                                <span class="property-value high">High</span>
+                            </div>
+                            <div class="property-item">
+                                <span class="property-label">pH Range:</span>
+                                <span class="property-value">6.0-7.0</span>
+                            </div>
+                            <div class="property-item">
+                                <span class="property-label">Water Retention:</span>
+                                <span class="property-value excellent">Excellent</span>
+                            </div>
+                        </div>
+                        <div class="characteristics">
+                            <h3>Key Characteristics:</h3>
+                            <ul>
+                                <li>Fine particles, sticky when wet</li>
+                                <li>Rich in nutrients and minerals</li>
+                                <li>Slow to warm up in spring</li>
+                                <li>Can become waterlogged</li>
+                            </ul>
+                        </div>
+                        <div class="best-crops">
+                            <h3>Best Crops:</h3>
+                            <div class="crop-tags">
+                                <span class="crop-tag">Rice</span>
+                                <span class="crop-tag">Wheat</span>
+                                <span class="crop-tag">Sugarcane</span>
+                                <span class="crop-tag">Cotton</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sandy Soil Card -->
+                <div class="soil-card" data-soil="sandy">
+                    <div class="card-header">
+                        <div class="soil-sample sandy-sample"></div>
+                        <h2 class="soil-name">Sandy Soil</h2>
+                        <div class="soil-icon">
+                            <i class="fas fa-sun"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="property-grid">
+                            <div class="property-item">
+                                <span class="property-label">Drainage:</span>
+                                <span class="property-value excellent">Excellent</span>
+                            </div>
+                            <div class="property-item">
+                                <span class="property-label">Fertility:</span>
+                                <span class="property-value low">Low</span>
+                            </div>
+                            <div class="property-item">
+                                <span class="property-label">pH Range:</span>
+                                <span class="property-value">5.5-6.5</span>
+                            </div>
+                            <div class="property-item">
+                                <span class="property-label">Water Retention:</span>
+                                <span class="property-value poor">Poor</span>
+                            </div>
+                        </div>
+                        <div class="characteristics">
+                            <h3>Key Characteristics:</h3>
+                            <ul>
+                                <li>Large particles, easy to work with</li>
+                                <li>Warms up quickly in spring</li>
+                                <li>Good aeration and drainage</li>
+                                <li>Requires frequent watering</li>
+                            </ul>
+                        </div>
+                        <div class="best-crops">
+                            <h3>Best Crops:</h3>
+                            <div class="crop-tags">
+                                <span class="crop-tag">Tomatoes</span>
+                                <span class="crop-tag">Carrots</span>
+                                <span class="crop-tag">Potatoes</span>
+                                <span class="crop-tag">Onions</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Loamy Soil Card -->
+                <div class="soil-card" data-soil="loamy">
+                    <div class="card-header">
+                        <div class="soil-sample loamy-sample"></div>
+                        <h2 class="soil-name">Loamy Soil</h2>
+                        <div class="soil-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="property-grid">
+                            <div class="property-item">
+                                <span class="property-label">Drainage:</span>
+                                <span class="property-value good">Good</span>
+                            </div>
+                            <div class="property-item">
+                                <span class="property-label">Fertility:</span>
+                                <span class="property-value excellent">Excellent</span>
+                            </div>
+                            <div class="property-item">
+                                <span class="property-label">pH Range:</span>
+                                <span class="property-value">6.0-7.5</span>
+                            </div>
+                            <div class="property-item">
+                                <span class="property-label">Water Retention:</span>
+                                <span class="property-value good">Good</span>
+                            </div>
+                        </div>
+                        <div class="characteristics">
+                            <h3>Key Characteristics:</h3>
+                            <ul>
+                                <li>Perfect balance of clay, sand, and silt</li>
+                                <li>Easy to work with and fertile</li>
+                                <li>Good water retention and drainage</li>
+                                <li>Ideal for most crops</li>
+                            </ul>
+                        </div>
+                        <div class="best-crops">
+                            <h3>Best Crops:</h3>
+                            <div class="crop-tags">
+                                <span class="crop-tag">Corn</span>
+                                <span class="crop-tag">Beans</span>
+                                <span class="crop-tag">Lettuce</span>
+                                <span class="crop-tag">Most Vegetables</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Silty Soil Card -->
+                <div class="soil-card" data-soil="silty">
+                    <div class="card-header">
+                        <div class="soil-sample silty-sample"></div>
+                        <h2 class="soil-name">Silty Soil</h2>
+                        <div class="soil-icon">
+                            <i class="fas fa-water"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="property-grid">
+                            <div class="property-item">
+                                <span class="property-label">Drainage:</span>
+                                <span class="property-value moderate">Moderate</span>
+                            </div>
+                            <div class="property-item">
+                                <span class="property-label">Fertility:</span>
+                                <span class="property-value high">High</span>
+                            </div>
+                            <div class="property-item">
+                                <span class="property-label">pH Range:</span>
+                                <span class="property-value">6.0-7.0</span>
+                            </div>
+                            <div class="property-item">
+                                <span class="property-label">Water Retention:</span>
+                                <span class="property-value good">Good</span>
+                            </div>
+                        </div>
+                        <div class="characteristics">
+                            <h3>Key Characteristics:</h3>
+                            <ul>
+                                <li>Smooth texture, retains moisture</li>
+                                <li>Rich in organic matter</li>
+                                <li>Can become compacted when wet</li>
+                                <li>Prone to erosion</li>
+                            </ul>
+                        </div>
+                        <div class="best-crops">
+                            <h3>Best Crops:</h3>
+                            <div class="crop-tags">
+                                <span class="crop-tag">Strawberries</span>
+                                <span class="crop-tag">Grass</span>
+                                <span class="crop-tag">Bamboo</span>
+                                <span class="crop-tag">Willow</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Peaty Soil Card -->
+                <div class="soil-card" data-soil="peaty">
+                    <div class="card-header">
+                        <div class="soil-sample peaty-sample"></div>
+                        <h2 class="soil-name">Peaty Soil</h2>
+                        <div class="soil-icon">
+                            <i class="fas fa-tree"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="property-grid">
+                            <div class="property-item">
+                                <span class="property-label">Drainage:</span>
+                                <span class="property-value poor">Poor</span>
+                            </div>
+                            <div class="property-item">
+                                <span class="property-label">Fertility:</span>
+                                <span class="property-value moderate">Moderate</span>
+                            </div>
+                            <div class="property-item">
+                                <span class="property-label">pH Range:</span>
+                                <span class="property-value">3.5-5.0</span>
+                            </div>
+                            <div class="property-item">
+                                <span class="property-label">Water Retention:</span>
+                                <span class="property-value excellent">Excellent</span>
+                            </div>
+                        </div>
+                        <div class="characteristics">
+                            <h3>Key Characteristics:</h3>
+                            <ul>
+                                <li>High organic matter content</li>
+                                <li>Acidic in nature</li>
+                                <li>Retains moisture well</li>
+                                <li>Slow to warm up</li>
+                            </ul>
+                        </div>
+                        <div class="best-crops">
+                            <h3>Best Crops:</h3>
+                            <div class="crop-tags">
+                                <span class="crop-tag">Blueberries</span>
+                                <span class="crop-tag">Azaleas</span>
+                                <span class="crop-tag">Heather</span>
+                                <span class="crop-tag">Cranberries</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chalky Soil Card -->
+                <div class="soil-card" data-soil="chalky">
+                    <div class="card-header">
+                        <div class="soil-sample chalky-sample"></div>
+                        <h2 class="soil-name">Chalky Soil</h2>
+                        <div class="soil-icon">
+                            <i class="fas fa-rocks"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="property-grid">
+                            <div class="property-item">
+                                <span class="property-label">Drainage:</span>
+                                <span class="property-value excellent">Excellent</span>
+                            </div>
+                            <div class="property-item">
+                                <span class="property-label">Fertility:</span>
+                                <span class="property-value moderate">Moderate</span>
+                            </div>
+                            <div class="property-item">
+                                <span class="property-label">pH Range:</span>
+                                <span class="property-value">7.5-8.5</span>
+                            </div>
+                            <div class="property-item">
+                                <span class="property-label">Water Retention:</span>
+                                <span class="property-value poor">Poor</span>
+                            </div>
+                        </div>
+                        <div class="characteristics">
+                            <h3>Key Characteristics:</h3>
+                            <ul>
+                                <li>Alkaline soil with limestone</li>
+                                <li>Free-draining, shallow depth</li>
+                                <li>Can be stony and rocky</li>
+                                <li>Prone to drying out</li>
+                            </ul>
+                        </div>
+                        <div class="best-crops">
+                            <h3>Best Crops:</h3>
+                            <div class="crop-tags">
+                                <span class="crop-tag">Spinach</span>
+                                <span class="crop-tag">Cabbage</span>
+                                <span class="crop-tag">Sweet Corn</span>
+                                <span class="crop-tag">Lilac</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Floating particles animation -->
+        <div class="floating-particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+    </div>
+
+    <script src="soil.js"></script>
+</body>
+</html>
